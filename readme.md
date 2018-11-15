@@ -13,8 +13,7 @@ Set up the user sign-in/sign-up using the `django` built in functionality.
 
 Release 1: Generate Models/Migrations
 -------------------------------------
-In `beer-rating/ratings/models.py`, create models for `Beer` and `Review`. A Beer can have many reviews and a review belongs to a beer. 
-Create a few beers to use as test data. 
+In `beer-rating/ratings/models.py`, create models for `Beer` and `Review`. A Beer can have many reviews and a review belongs to a beer. Then, create a few beers to use as test data. 
 
 Release 2: CRUD Beers/Reviews (Nested)
 --------------------------------------
