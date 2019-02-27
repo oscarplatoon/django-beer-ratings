@@ -1,15 +1,14 @@
-# Using nested resources: Beer Ratings
+# Using Nested Resources: Beer Ratings
 
 Today, we are going to be creating an app that allows users to review their favorite beers. Just about everyone likes beer, and life is too short to drink Keystone Light and/or Milwaukee's Best.
 
-In our app, we're going to use `django's` built in user sign-up and authorization. A user can sign up, find a list of beers, and leave a review for a beer. A beer can have many reviews and when all the beers are listed, you can click on an individual beer and see all the relevant reviews. When you sign in, you can see all the reviews you've left on different beers.
+In our app, a user can sign up, find a list of beers, and leave a review for a beer. A beer can have many reviews and when all the beers are listed, you can click on an individual beer and see all the relevant reviews. When you sign in, you can see all the reviews you've left on different beers.
 
-For the purposes of our basic CRUD app today, anyone can create a beer. 
+For the purposes of our basic CRUD app today, anyone can create a beer.
 
-
-Release 0: Users 
+Release 0: Users Logging In/Out
 ----------------
-Set up the user sign-in/sign-up using the `django` built in functionality. 
+Tutorials are your friend when you start programming. [This](https://wsvincent.com/django-user-authentication-tutorial-login-and-logout/) is a great one.
 
 Release 1: Generate Models/Migrations
 -------------------------------------
