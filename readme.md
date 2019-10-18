@@ -18,3 +18,6 @@ Release 2: CRUD Beers/Reviews (Nested)
 --------------------------------------
 Now add your routes so that users can add, update, and delete reviews for a beer. Users should be able to see all reviews for a beer, but should only be able to update and delete reviews that they created. 
 
+Stretch: Search box, Seed with faker
+--------------------------------------
+Create a search box that lets users search for matching beers and/or reviews. To test this functionality, use [faker](https://github.com/joke2k/faker/) to seed your database with lots of entries! Faker has lots of [options](https://faker.readthedocs.io/en/master/locales/en_US.html).
