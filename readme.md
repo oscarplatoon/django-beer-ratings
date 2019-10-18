@@ -8,7 +8,7 @@ For the purposes of our basic CRUD app today, anyone can create a beer.
 
 Release 0: Users Logging In/Out
 ----------------
-Create a new Django App, with postgresql as a database, and user authentication. Tutorials are your friend when you start programming. [This](https://wsvincent.com/django-user-authentication-tutorial-login-and-logout/) is a great one.
+Create a new Django App, with postgresql as a database, and user authentication. Tutorials are your friend when you start programming. [This](https://wsvincent.com/django-user-authentication-tutorial-login-and-logout/) is a great one. So is [this](https://github.com/julietplatoon/curriculum/blob/master/week-06/2019-10-09.md) one ;)
 
 Once you've `pip install`ed everything you need in your virtual environment, you can `pip freeze > requirements.txt`. That 'freezes' all the requirements of your virtual environment so that you can install everything at once later on with `pip install -r requirements.txt`
 
