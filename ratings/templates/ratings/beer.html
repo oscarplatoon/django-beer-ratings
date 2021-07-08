@@ -1,0 +1,13 @@
+{% extends 'ratings/base.html' %}
+
+{% block title %}{{ beer.name }}{% endblock title %}
+
+{% block content %}
+    <h1>{{ beer.name }}</h1>
+    <a href="{% url 'ratings:edit_beer' beer_id=beer.id %}">Edit</a>
+    <a href="{% url 'ratings:delete_beer' beer_id=beer.id %}">Delete</a>
+    
+    {% comment %} Show all reviews here {% endcomment %}
+    <br />
+    <a href="{% url 'ratings:show_beers' %}">All Beers</a>
+{% endblock content %}
