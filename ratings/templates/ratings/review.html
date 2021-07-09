@@ -1,0 +1,24 @@
+{% extends 'ratings/base.html' %}
+
+{% block title %}Review For {{ beer.name }}{% endblock title %}
+
+{% block content %}
+    <h1>Review For {{ beer.name }}</h1>
+    {% comment %} <a href="{% url 'ratings:edit_beer' beer_id=beer.id %}">Edit</a> {% endcomment %}
+    {% comment %} <a href="{% url 'ratings:delete_beer' beer_id=beer.id %}">Delete</a> {% endcomment %}
+    
+    <br>
+    <h2>{{review.title}}</h2>
+    <p>Stars: {{review.stars}}</p>
+    <p>{{review.content}}</p>
+    <p>Written by: {{review.author}}</p>
+
+    <br>
+    {% if user == review.author %}
+        <a href="{% url 'ratings:edit_review' beer_id=beer.id review_id=review.id %}">Edit</a>
+        <a href="{% url 'ratings:delete_review' beer_id=beer.id review_id=review.id %}">Delete</a>
+    {% endif %}
+
+    <br>
+    <a href="{% url 'ratings:show_reviews' beer_id=beer.id %}">Back To Reviews</a>
+{% endblock content %}

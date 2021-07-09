@@ -3,6 +3,15 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
+    <br>
     <p>This is home</p>
+    <p>Here are the reviews you've made:</p>
+    
+    <ul>
+        {% for review in reviews %}
+            <li><a href="{% url 'ratings:show_review' review_id=review.id beer_id=review.beer.id %}">{{review.title}}</a></li>        
+        {% endfor %}    
+    </ul>
+
     <a href="{% url 'ratings:show_beers' %}">List Beers</a>
 {% endblock content %}

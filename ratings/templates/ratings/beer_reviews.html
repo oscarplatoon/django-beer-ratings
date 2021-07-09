@@ -1,0 +1,16 @@
+{% extends 'ratings/base.html' %}
+
+{% block title %}Reviews For {{ beer.name }}{% endblock title %}
+
+{% block content %}
+    <h1>Reviews For {{ beer.name }}</h1>
+    <ul>
+        {% for review in reviews %}
+            <li><a href="{% url 'ratings:show_review' review_id=review.id beer_id=beer.id %}">{{ review.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'ratings:create_review' beer_id=beer.id %}">New Review</a>
+    <br>
+    <a href="{% url 'ratings:show_beer' beer_id=beer.id %}">Back To {{beer.name}}</a>
+{% endblock content %}

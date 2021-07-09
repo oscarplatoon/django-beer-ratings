@@ -7,7 +7,9 @@
     <a href="{% url 'ratings:edit_beer' beer_id=beer.id %}">Edit</a>
     <a href="{% url 'ratings:delete_beer' beer_id=beer.id %}">Delete</a>
     
-    {% comment %} Show all reviews here {% endcomment %}
-    <br />
-    <a href="{% url 'ratings:show_beers' %}">All Beers</a>
+    <br>
+    <br>
+    <a href="{% url 'ratings:show_reviews' beer_id=beer.id %}">Show Reviews</a>
+    <br>
+    <a href="{% url 'ratings:show_beers' %}">Back to Beers</a>
 {% endblock content %}

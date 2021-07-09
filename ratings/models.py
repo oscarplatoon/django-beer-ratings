@@ -25,4 +25,4 @@ class Review(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     author = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=None)
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=None, related_name='reviews')

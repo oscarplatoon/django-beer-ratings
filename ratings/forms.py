@@ -6,3 +6,10 @@ class BeerForm(ModelForm):
     class Meta:
         model = Beer
         fields = ['name']
+
+
+class ReviewForm(ModelForm):
+    class Meta:
+        model = Review
+        fields = ['stars', 'title', 'content']
+        exclude = ['beer', 'author']
