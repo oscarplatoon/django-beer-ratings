@@ -1,0 +1,7 @@
+<h2>{{ type_of_request }} Review of {{ beer.beer_name }}</h2>
+<form method="POST">{% csrf_token %}
+  <table></table>
+  {{ form.as_table }}
+  <button type="submit">Save</button>
+</table>
+</form>

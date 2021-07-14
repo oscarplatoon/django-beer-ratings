@@ -1,0 +1,10 @@
+<h1> All Reviews for {{ beer.beer_name }} </h1>
+<ul>
+  {% for review in reviews %}
+    <div>
+      <li><a href="{% url 'review_detail' beer_id=beer.id review_id=review.id %}">{{ review.id }}</a></li>
+    </div>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'new_review' beer_id=beer.id %}">Add a new review</a>
