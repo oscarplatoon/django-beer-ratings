@@ -1,0 +1,10 @@
+
+<div>
+  <h2>Review of {{beer.beer_name}}</h2>
+  <p> {{review.review}}</p>
+  <br>
+  <a href="{% url 'edit_review' beer_id=beer.id review_id=review.id%}">Edit Review</a>
+  <br>
+  <br>
+  <a href="{% url 'review_list' beer_id=beer.id %}">Back to Review List</a>
+</div>

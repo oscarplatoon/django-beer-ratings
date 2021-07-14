@@ -1,0 +1,16 @@
+
+<div>
+  <h2>{{ beer.beer_brewer }} {{beer.beer_name}}</h2>
+  <h3>{{beer.beer_type}}</h3>
+  <br>
+  <a href="{% url 'edit_beer' beer_id=beer.id %}"> Edit beer</a>
+  <hr/>
+  <div>
+    <a href="{% url 'review_list' beer_id=beer.id %}">Reviews of this beer</a>
+  </div>
+  <a href="{% url 'beers_list' %}">Beer List</a>
+  <form name="delete_beer" method="POST" action="{% url 'delete_beer' beer_id=beer.id %}">
+    {% csrf_token %}
+    <input type="submit" value="Delete beer" />
+  </form>
+</div>

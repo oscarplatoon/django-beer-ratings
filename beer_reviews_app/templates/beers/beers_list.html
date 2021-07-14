@@ -1,0 +1,12 @@
+
+<h1> All Beers </h1>
+
+<ul>
+  {% for beer in beers %}
+    <div>
+      <li><a href="{% url 'beer_detail' beer_id=beer.id %}">{{beer.beer_brewer}} {{ beer.beer_name }}</a></li>
+    </div>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'new_beer' %}">Create a new beer</a>
