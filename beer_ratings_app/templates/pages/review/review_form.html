@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block page-title %}
+{{ action }} Review
+{% endblock %}
+
+{% block main-content %}
+<h1>
+    {{ action }} Review for {{ beer.name }} 
+</h1>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button type=submit>{{ action }} Review</button>
+</form>
+{% endblock %}
