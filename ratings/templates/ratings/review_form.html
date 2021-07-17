@@ -1,0 +1,12 @@
+{% extends 'ratings/base.html' %}
+
+{% block title %}{{ type_of_form }} Review of {{ beer.name }}{% endblock title %}
+
+{% block content %}
+    <h1>{{type_of_form}} Review of {{beer.name}}</h1>
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}

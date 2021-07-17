@@ -1,0 +1,15 @@
+{% extends 'ratings/base.html' %}
+
+{% block title %}Beers{% endblock title %}
+
+{% block content %}
+    <h1>Beers</h1>
+    <ul>
+        {% for beer in beers %}
+            <li><a href="{% url 'ratings:show_beer' beer_id=beer.id %}">{{ beer.name }}</a></li>    
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'ratings:create_beer' %}">New</a>
+    <a href="{% url 'ratings:home' %}">Home</a>
+{% endblock content %}
